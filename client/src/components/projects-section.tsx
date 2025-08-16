@@ -18,7 +18,7 @@ export default function ProjectsSection() {
       icon: <Shield className="text-white text-xl" />,
       metric: "79.3% accuracy achieved",
       metricIcon: <TrendingUp className="mr-2 w-4 h-4" />,
-      githubUrl: "https://github.com/aditya998800/NSL-KDD-Intrusion-Detection",
+      githubUrl: "https://github.com/aditya00604/nsl-kdd-ids",
       gradient: "from-red-500/20 to-orange-500/20",
       borderColor: "border-red-500/30"
     },
