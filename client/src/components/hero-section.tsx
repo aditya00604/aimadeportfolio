@@ -153,7 +153,7 @@ export default function HeroSection() {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a 
-                href="https://github.com/aditya998800" 
+                href="https://github.com/aditya00604" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-electric-blue transition-colors text-xl"
