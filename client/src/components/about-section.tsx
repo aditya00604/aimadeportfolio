@@ -91,29 +91,7 @@ export default function AboutSection() {
             </div>
           </motion.div>
           
-          {/* Professional Achievements */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="mt-8"
-          >
-            <h3 className="text-xl font-bold text-white text-center mb-6">Professional Achievements</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div className="text-center p-4 bg-gradient-to-br from-electric-blue/20 to-tech-purple/20 rounded-lg border border-electric-blue/30 hover:scale-105 transition-transform">
-                <div className="text-2xl font-bold text-electric-blue" data-testid="stat-dsa-problems">900+</div>
-                <div className="text-sm text-slate-400">DSA Problems</div>
-              </div>
-              <div className="text-center p-4 bg-gradient-to-br from-neon-green/20 to-electric-blue/20 rounded-lg border border-neon-green/30 hover:scale-105 transition-transform">
-                <div className="text-2xl font-bold text-neon-green" data-testid="stat-codeforces-rank">167th</div>
-                <div className="text-sm text-slate-400">Codeforces Rank</div>
-              </div>
-              <div className="text-center p-4 bg-gradient-to-br from-tech-purple/20 to-neon-green/20 rounded-lg border border-tech-purple/30 hover:scale-105 transition-transform col-span-2 md:col-span-1">
-                <div className="text-2xl font-bold text-tech-purple" data-testid="stat-sae-rank">11th</div>
-                <div className="text-sm text-slate-400">SAE National</div>
-              </div>
-            </div>
-          </motion.div>
+          
         </div>
       </div>
     </section>
