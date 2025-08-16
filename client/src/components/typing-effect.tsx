@@ -9,6 +9,7 @@ interface TypingEffectProps {
 export default function TypingEffect({ text, speed = 50, className = "" }: TypingEffectProps) {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     if (currentIndex < text.length) {
@@ -18,12 +19,24 @@ export default function TypingEffect({ text, speed = 50, className = "" }: Typin
       }, speed);
 
       return () => clearTimeout(timer);
+    } else {
+      // Animate cursor after typing is complete
+      const cursorTimer = setInterval(() => {
+        setShowCursor(prev => !prev);
+      }, 600);
+      
+      return () => clearInterval(cursorTimer);
     }
   }, [currentIndex, text, speed]);
 
   return (
-    <span className={`${className} border-r-2 border-neon-green animate-pulse`}>
-      {displayedText}
+    <span className={`${className} inline-block relative max-w-full break-words whitespace-normal leading-relaxed`}>
+      <span className="inline">{displayedText}</span>
+      <span 
+        className={`inline-block w-0.5 h-6 bg-neon-green ml-1 transition-opacity duration-200 ${
+          showCursor ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
     </span>
   );
 }
