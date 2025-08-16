@@ -5,8 +5,9 @@ This is a full-stack portfolio website for Aditya Kumar Mishra, a Computer Scien
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
-Tech Stack Display: Apple Watch home screen style circular layout with all project technologies.
+Tech Stack Display: Futuristic professional layout with interactive filtering system for HR showcase.
 Portfolio Enhancement: Professional presentation with comprehensive project impact metrics.
+Technical Skills: Interactive categorized view with search, proficiency bars, and detailed project tooltips.
 
 # System Architecture
 

@@ -2,7 +2,7 @@ import { Code, GraduationCap, Calendar, Award, Target } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Keyboard3D from "./keyboard-3d";
-import AppleWatchTechStack from "./apple-watch-tech-stack";
+import FuturisticTechSkills from "./futuristic-tech-skills";
 
 export default function SkillsSection() {
   const { ref, inView } = useInView({
@@ -50,7 +50,7 @@ export default function SkillsSection() {
           ref={ref}
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 text-shadow-glow">
-            Technical <span className="text-electric-blue">Skills</span>
+            Technical <span className="text-electric-blue">Skills</span> & <span className="text-neon-green">Expertise</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-electric-blue to-neon-green mx-auto animate-shimmer"></div>
           <div className="flex items-center justify-center gap-4 mt-4 mb-2">
@@ -63,19 +63,19 @@ export default function SkillsSection() {
               <span className="text-white font-semibold">2025 Batch</span>
             </div>
           </div>
-          <p className="text-lg text-slate-300 mt-2 max-w-2xl mx-auto">
-            Ready to contribute with modern tech stack and fresh perspective
+          <p className="text-lg text-slate-300 mt-2 max-w-3xl mx-auto">
+            Interactive technology showcase with comprehensive proficiency metrics and project portfolio
           </p>
         </motion.div>
         
-        {/* Apple Watch Style Tech Stack Display */}
+        {/* Futuristic Professional Tech Skills Display */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, delay: 0.3 }}
           className="mb-20"
         >
-          <AppleWatchTechStack />
+          <FuturisticTechSkills />
         </motion.div>
 
         {/* Enhanced Skills Summary Grid */}
