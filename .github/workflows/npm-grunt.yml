@@ -22,19 +22,19 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: npm install
+    - name: Install dependencies (including grunt)
+      run: |
+        npm install
+        npm install grunt grunt-cli --save-dev
 
     - name: Build project
       run: |
-        grunt
+        npx grunt
         npm run build
 
-    # Optional: Run tests or checks before deploying
     - name: TypeScript Check
       run: npm run check
 
-    # Deploy step (example: using SSH to VPS)
     - name: Deploy to Server
       uses: appleboy/scp-action@v0.1.7
       with:
@@ -44,7 +44,6 @@ jobs:
         source: "dist/*"
         target: "/var/www/rest-express"
 
-    # (Optional) Restart app on server
     - name: Restart App
       uses: appleboy/ssh-action@v0.1.10
       with:
@@ -55,4 +54,3 @@ jobs:
           cd /var/www/rest-express
           npm install --production
           pm2 restart dist/index.js
-
