@@ -1,8 +1,8 @@
-import { Code, Globe, Database, GraduationCap, Calendar } from "lucide-react";
+import { Code, GraduationCap, Calendar, Award, Target } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Keyboard3D from "./keyboard-3d";
-import CircularTechStack from "./circular-tech-stack";
+import AppleWatchTechStack from "./apple-watch-tech-stack";
 
 export default function SkillsSection() {
   const { ref, inView } = useInView({
@@ -11,18 +11,17 @@ export default function SkillsSection() {
   });
 
   const languages = [
-    { name: "C++", proficiency: 90 },
-    { name: "Python", proficiency: 90 },
-    { name: "Java", proficiency: 85 },
-    { name: "SQL", proficiency: 85 },
+    { name: "C++", proficiency: 90, projects: "900+ DSA Problems" },
+    { name: "Python", proficiency: 90, projects: "ML, AI & Backend" },
+    { name: "Java", proficiency: 85, projects: "DSA & Enterprise" },
+    { name: "SQL", proficiency: 85, projects: "Database Design" },
   ];
 
-  const webTechnologies = [
-    "React.js", "Next.js", "Flask", "FastAPI", "Express.js"
-  ];
-
-  const databases = [
-    "MongoDB", "MySQL", "Firebase", "SQLite"
+  const achievements = [
+    "900+ DSA problems solved across platforms",
+    "Ranked 167th out of 12,000+ in Codeforces Round 1016",
+    "11th rank nationally in SAE competition (150+ teams)",
+    "Qualified for Boeing Aeromodelling final round at IIT Bombay"
   ];
 
   return (
@@ -69,17 +68,17 @@ export default function SkillsSection() {
           </p>
         </motion.div>
         
-        {/* Circular Tech Stack Display */}
+        {/* Apple Watch Style Tech Stack Display */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, delay: 0.3 }}
-          className="mb-16"
+          className="mb-20"
         >
-          <CircularTechStack />
+          <AppleWatchTechStack />
         </motion.div>
 
-        {/* Skills Summary Grid */}
+        {/* Enhanced Skills Summary Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {/* Programming Proficiency */}
           <motion.div 
@@ -95,11 +94,14 @@ export default function SkillsSection() {
               <Code className="text-white text-2xl" />
             </motion.div>
             <h3 className="text-xl font-bold text-white mb-3">Programming</h3>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {languages.map((lang) => (
-                <div key={lang.name} className="flex justify-between items-center">
-                  <span className="text-slate-300 text-sm">{lang.name}</span>
-                  <div className="w-16 h-1 bg-slate-700 rounded-full overflow-hidden">
+                <div key={lang.name} className="space-y-1">
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-300 text-sm font-medium">{lang.name}</span>
+                    <span className="text-xs text-slate-400">{lang.proficiency}%</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-slate-700 rounded-full overflow-hidden">
                     <motion.div 
                       initial={{ width: 0 }}
                       animate={inView ? { width: `${lang.proficiency}%` } : {}}
@@ -108,12 +110,13 @@ export default function SkillsSection() {
                       data-testid={`skill-${lang.name.toLowerCase()}`}
                     />
                   </div>
+                  <div className="text-xs text-slate-500">{lang.projects}</div>
                 </div>
               ))}
             </div>
           </motion.div>
           
-          {/* Web Technologies */}
+          {/* Project Highlights */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -124,26 +127,30 @@ export default function SkillsSection() {
               whileHover={{ rotateY: -15 }}
               className="w-16 h-16 bg-gradient-to-br from-neon-green to-electric-blue rounded-full flex items-center justify-center mx-auto mb-4 glow-pulse"
             >
-              <Globe className="text-white text-2xl" />
+              <Target className="text-white text-2xl" />
             </motion.div>
-            <h3 className="text-xl font-bold text-white mb-3">Web Stack</h3>
-            <div className="flex flex-wrap gap-1 justify-center">
-              {webTechnologies.map((tech, index) => (
-                <motion.span 
-                  key={tech}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ delay: 1.2 + (index * 0.1) }}
-                  className="px-2 py-1 bg-neon-green/20 text-neon-green rounded-full text-xs"
-                  data-testid={`tech-${tech.toLowerCase().replace('.', '-')}`}
-                >
-                  {tech}
-                </motion.span>
-              ))}
+            <h3 className="text-xl font-bold text-white mb-3">Project Impact</h3>
+            <div className="space-y-2 text-left">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-neon-green rounded-full"></div>
+                <span className="text-sm text-slate-300">6 Full-Stack Projects</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-electric-blue rounded-full"></div>
+                <span className="text-sm text-slate-300">AI/ML Integration</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-tech-purple rounded-full"></div>
+                <span className="text-sm text-slate-300">IoT & Edge Computing</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-neon-green rounded-full"></div>
+                <span className="text-sm text-slate-300">40% Yield Improvement</span>
+              </div>
             </div>
           </motion.div>
           
-          {/* Database & Tools */}
+          {/* Achievements */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -152,23 +159,23 @@ export default function SkillsSection() {
           >
             <motion.div 
               whileHover={{ rotateY: 15 }}
-              className="w-16 h-16 bg-gradient-to-br from-tech-purple to-neon-green rounded-full flex items-center justify-center mx-auto mb-4 glow-pulse"
+              className="w-16 h-16 bg-gradient-to-br from-tech-purple to-electric-blue rounded-full flex items-center justify-center mx-auto mb-4 glow-pulse"
             >
-              <Database className="text-white text-2xl" />
+              <Award className="text-white text-2xl" />
             </motion.div>
-            <h3 className="text-xl font-bold text-white mb-3">Data & Tools</h3>
-            <div className="flex flex-wrap gap-1 justify-center">
-              {databases.map((db, index) => (
-                <motion.span 
-                  key={db}
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={inView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ delay: 1.4 + (index * 0.1) }}
-                  className="px-2 py-1 bg-tech-purple/20 text-tech-purple rounded-full text-xs"
-                  data-testid={`db-${db.toLowerCase()}`}
+            <h3 className="text-xl font-bold text-white mb-3">Achievements</h3>
+            <div className="space-y-2 text-left">
+              {achievements.map((achievement, index) => (
+                <motion.div 
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.5, delay: 1.4 + (index * 0.1) }}
+                  className="flex items-start gap-2"
                 >
-                  {db}
-                </motion.span>
+                  <div className="w-1.5 h-1.5 bg-electric-blue rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-xs text-slate-300 leading-relaxed">{achievement}</span>
+                </motion.div>
               ))}
             </div>
           </motion.div>
