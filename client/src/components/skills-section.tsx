@@ -116,7 +116,7 @@ export default function SkillsSection() {
             </div>
           </motion.div>
           
-          {/* Project Highlights */}
+          {/* Interpersonal Skills */}
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -125,32 +125,32 @@ export default function SkillsSection() {
           >
             <motion.div 
               whileHover={{ rotateY: -15 }}
-              className="w-16 h-16 bg-gradient-to-br from-neon-green to-electric-blue rounded-full flex items-center justify-center mx-auto mb-4 glow-pulse"
+              className="w-16 h-16 bg-gradient-to-br from-neon-green to-electric-blue rounded-full flex items-center justify-center mx-auto mb-4"
             >
               <Target className="text-white text-2xl" />
             </motion.div>
-            <h3 className="text-xl font-bold text-white mb-3">Project Impact</h3>
+            <h3 className="text-xl font-bold text-white mb-3">Leadership & Collaboration</h3>
             <div className="space-y-2 text-left">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-neon-green rounded-full"></div>
-                <span className="text-sm text-slate-300">6 Full-Stack Projects</span>
+                <span className="text-sm text-slate-300">Team Leadership</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-electric-blue rounded-full"></div>
-                <span className="text-sm text-slate-300">AI/ML Integration</span>
+                <span className="text-sm text-slate-300">Cross-functional Communication</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-tech-purple rounded-full"></div>
-                <span className="text-sm text-slate-300">IoT & Edge Computing</span>
+                <span className="text-sm text-slate-300">Project Management</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-neon-green rounded-full"></div>
-                <span className="text-sm text-slate-300">40% Yield Improvement</span>
+                <span className="text-sm text-slate-300">Agile Methodologies</span>
               </div>
             </div>
           </motion.div>
           
-          {/* Achievements */}
+          {/* Soft Skills */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -159,24 +159,28 @@ export default function SkillsSection() {
           >
             <motion.div 
               whileHover={{ rotateY: 15 }}
-              className="w-16 h-16 bg-gradient-to-br from-tech-purple to-electric-blue rounded-full flex items-center justify-center mx-auto mb-4 glow-pulse"
+              className="w-16 h-16 bg-gradient-to-br from-tech-purple to-electric-blue rounded-full flex items-center justify-center mx-auto mb-4"
             >
               <Award className="text-white text-2xl" />
             </motion.div>
-            <h3 className="text-xl font-bold text-white mb-3">Achievements</h3>
+            <h3 className="text-xl font-bold text-white mb-3">Professional Skills</h3>
             <div className="space-y-2 text-left">
-              {achievements.map((achievement, index) => (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 1.4 + (index * 0.1) }}
-                  className="flex items-start gap-2"
-                >
-                  <div className="w-1.5 h-1.5 bg-electric-blue rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-xs text-slate-300 leading-relaxed">{achievement}</span>
-                </motion.div>
-              ))}
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-electric-blue rounded-full mt-2 flex-shrink-0"></div>
+                <span className="text-xs text-slate-300 leading-relaxed">Problem-solving mindset with analytical thinking</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-neon-green rounded-full mt-2 flex-shrink-0"></div>
+                <span className="text-xs text-slate-300 leading-relaxed">Adaptability to new technologies and frameworks</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-tech-purple rounded-full mt-2 flex-shrink-0"></div>
+                <span className="text-xs text-slate-300 leading-relaxed">Strong written and verbal communication</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <div className="w-1.5 h-1.5 bg-electric-blue rounded-full mt-2 flex-shrink-0"></div>
+                <span className="text-xs text-slate-300 leading-relaxed">Time management and deadline-oriented delivery</span>
+              </div>
             </div>
           </motion.div>
         </div>

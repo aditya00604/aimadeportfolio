@@ -142,15 +142,6 @@ export default function HeroSection() {
               className="flex flex-wrap gap-4 mt-6"
             >
               <a 
-                href="https://leetcode.com/u/aditya998800/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-4 py-2 rounded-lg hover:scale-105 transition-transform font-medium"
-                data-testid="link-leetcode"
-              >
-                LeetCode (900+ Problems)
-              </a>
-              <a 
                 href="https://www.geeksforgeeks.org/user/akm998800hj/" 
                 target="_blank"
                 rel="noopener noreferrer"
