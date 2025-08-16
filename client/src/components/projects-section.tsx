@@ -54,6 +54,50 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/aditya998800/Real-Time-Code-Editor",
       gradient: "from-blue-500/20 to-cyan-500/20",
       borderColor: "border-blue-500/30"
+    },
+    {
+      title: "SE-Inventory Management System",
+      description: "Comprehensive inventory management platform with authentication, real-time updates, and analytics dashboard. Features role-based access control and automated reporting.",
+      technologies: ["Next.js", "MySQL", "NextAuth"],
+      icon: <TrendingUp className="text-white text-xl" />,
+      metric: "40% efficiency improvement",
+      metricIcon: <TrendingUp className="mr-2 w-4 h-4" />,
+      githubUrl: "https://github.com/aditya998800/SE-Inventory",
+      gradient: "from-indigo-500/20 to-purple-500/20",
+      borderColor: "border-indigo-500/30"
+    },
+    {
+      title: "API Testing Platform",
+      description: "Professional API testing and development tool with intuitive interface, request history, and comprehensive response analysis. Streamlines API development workflow.",
+      technologies: ["React", "Axios", "REST API"],
+      icon: <ExternalLink className="text-white text-xl" />,
+      metric: "Enhanced development workflow",
+      metricIcon: <TrendingUp className="mr-2 w-4 h-4" />,
+      githubUrl: "https://github.com/aditya998800/API-Tester",
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      borderColor: "border-cyan-500/30"
+    },
+    {
+      title: "E-commerce Platform",
+      description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Built with modern technologies for scalability and performance.",
+      technologies: ["React", "Node.js", "MongoDB"],
+      icon: <TrendingUp className="text-white text-xl" />,
+      metric: "Complete e-commerce solution",
+      metricIcon: <TrendingUp className="mr-2 w-4 h-4" />,
+      githubUrl: "https://github.com/aditya998800/Ecommerce-Platform",
+      gradient: "from-emerald-500/20 to-green-500/20",
+      borderColor: "border-emerald-500/30"
+    },
+    {
+      title: "Weather Analytics Dashboard",
+      description: "Data visualization platform for weather analytics with real-time updates, historical data analysis, and predictive modeling. Features interactive charts and comprehensive reporting.",
+      technologies: ["Python", "Flask", "Chart.js"],
+      icon: <Brain className="text-white text-xl" />,
+      metric: "95% prediction accuracy",
+      metricIcon: <Brain className="mr-2 w-4 h-4" />,
+      githubUrl: "https://github.com/aditya998800/Weather-Analytics",
+      gradient: "from-yellow-500/20 to-orange-500/20",
+      borderColor: "border-yellow-500/30"
     }
   ];
 
@@ -77,7 +121,7 @@ export default function ProjectsSection() {
           className="text-center mb-16"
           ref={ref}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 text-shadow-glow">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 text-shadow-subtle">
             Featured <span className="text-electric-blue">Projects</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-electric-blue to-neon-green mx-auto animate-shimmer"></div>
@@ -86,7 +130,7 @@ export default function ProjectsSection() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div 
               key={project.title}

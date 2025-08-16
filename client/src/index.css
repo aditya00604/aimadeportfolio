@@ -125,15 +125,17 @@
     background: linear-gradient(135deg, var(--dark-bg) 0%, var(--space-blue) 50%, hsl(220 40% 12%) 100%);
   }
 
-  .tech-glow {
-    box-shadow: 
-      0 0 20px rgba(0, 212, 255, 0.4),
-      0 0 40px rgba(0, 212, 255, 0.2),
-      inset 0 0 20px rgba(0, 212, 255, 0.1);
+  .tech-card-border {
+    border: 1px solid rgba(0, 212, 255, 0.3);
   }
 
-  .glow-pulse {
-    animation: glowPulse 3s ease-in-out infinite;
+  .subtle-hover {
+    transition: all 0.3s ease;
+  }
+
+  .subtle-hover:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 212, 255, 0.6);
   }
 
   .keyboard-3d {
@@ -204,11 +206,8 @@
     transform-style: preserve-3d;
   }
 
-  .text-shadow-glow {
-    text-shadow: 
-      0 0 10px currentColor,
-      0 0 20px currentColor,
-      0 0 30px currentColor;
+  .text-shadow-subtle {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .animation-delay-2s {

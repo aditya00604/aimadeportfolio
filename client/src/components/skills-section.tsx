@@ -49,7 +49,7 @@ export default function SkillsSection() {
           className="text-center mb-16"
           ref={ref}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 text-shadow-glow">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 text-shadow-subtle">
             Technical <span className="text-electric-blue">Skills</span> & <span className="text-neon-green">Expertise</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-electric-blue to-neon-green mx-auto animate-shimmer"></div>

@@ -99,23 +99,19 @@ export default function HeroSection() {
               </p>
             </div>
             
-            {/* Animated Quote with better alignment */}
+            {/* Professional Summary */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 1 }}
-              className="bg-space-blue/50 backdrop-blur-sm border border-electric-blue/30 rounded-lg p-6 mb-8 max-w-4xl"
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="mb-8"
             >
-              <blockquote className="text-lg italic text-slate-300 leading-relaxed text-center">
-                <span className="text-electric-blue font-mono text-2xl">"</span>
-                <div className="inline-block mx-2 word-wrap break-words">
-                  <TypingEffect 
-                    text="Coding is how I tell stories. Each line is a sentence, every bug a twist, and every fix moves the story forward. With code, I turn ideas into real experiences."
-                    className="inline-block max-w-full"
-                  />
-                </div>
-                <span className="text-electric-blue font-mono text-2xl">"</span>
-              </blockquote>
+              <p className="text-lg text-slate-300 leading-relaxed">
+                Full-stack developer specializing in <span className="text-electric-blue font-semibold">AI/ML integration</span>, 
+                <span className="text-neon-green font-semibold"> modern web technologies</span>, and 
+                <span className="text-tech-purple font-semibold"> IoT systems</span>. 
+                Passionate about building innovative solutions that drive real-world impact.
+              </p>
             </motion.div>
             
             <div className="flex flex-col sm:flex-row gap-4">

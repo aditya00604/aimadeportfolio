@@ -203,7 +203,7 @@ export default function FuturisticTechSkills() {
     totalSkills: techStack.length,
     avgProficiency: Math.round(techStack.reduce((sum, tech) => sum + tech.proficiency, 0) / techStack.length),
     trendingSkills: techStack.filter(tech => tech.trending).length,
-    totalProjects: [...new Set(techStack.flatMap(tech => tech.projects))].length
+    totalProjects: 8
   };
 
   return (
@@ -358,9 +358,9 @@ export default function FuturisticTechSkills() {
                   onHoverEnd={() => setHoveredTech(null)}
                   className="relative group"
                 >
-                  {/* Glow Effect */}
+                  {/* Hover Effect */}
                   <div 
-                    className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-20 rounded-xl blur-xl transition-all duration-300 ${category?.gradient}`}
+                    className={`absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-10 rounded-xl transition-all duration-300 ${category?.gradient}`}
                   />
                   
                   {/* Main Card */}
