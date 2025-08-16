@@ -134,23 +134,7 @@ export default function HeroSection() {
               </Button>
             </div>
             
-            {/* Coding Profiles */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
-              className="flex flex-wrap gap-4 mt-6"
-            >
-              <a 
-                href="https://codeforces.com/profile/aditya998800" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-lg hover:scale-105 transition-transform font-medium"
-                data-testid="link-codeforces"
-              >
-                Codeforces (Rank 167)
-              </a>
-            </motion.div>
+            
 
             {/* Social Links */}
             <motion.div 
