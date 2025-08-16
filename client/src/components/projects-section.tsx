@@ -29,7 +29,7 @@ export default function ProjectsSection() {
       icon: <Brain className="text-white text-xl" />,
       metric: "92% response accuracy",
       metricIcon: <Brain className="mr-2 w-4 h-4" />,
-      githubUrl: "https://github.com/aditya998800/PDF-AI-Chat-Reader",
+      githubUrl: "https://github.com/aditya00604/smart_pdf_mgr",
       gradient: "from-purple-500/20 to-pink-500/20",
       borderColor: "border-purple-500/30"
     },
@@ -40,7 +40,7 @@ export default function ProjectsSection() {
       icon: <Sprout className="text-white text-xl" />,
       metric: "40% yield improvement",
       metricIcon: <Sprout className="mr-2 w-4 h-4" />,
-      githubUrl: "https://github.com/aditya998800/Intelligent-Coconut-Farming",
+      githubUrl: "https://github.com/aditya00604/mjr",
       gradient: "from-green-500/20 to-emerald-500/20",
       borderColor: "border-green-500/30"
     },
@@ -51,7 +51,7 @@ export default function ProjectsSection() {
       icon: <ExternalLink className="text-white text-xl" />,
       metric: "Complete privacy protection",
       metricIcon: <Shield className="mr-2 w-4 h-4" />,
-      githubUrl: "https://github.com/aditya998800/Real-Time-Code-Editor",
+      githubUrl: "https://github.com/aditya00604/Real-Time-Code-Editor",
       gradient: "from-blue-500/20 to-cyan-500/20",
       borderColor: "border-blue-500/30"
     },
@@ -62,7 +62,7 @@ export default function ProjectsSection() {
       icon: <TrendingUp className="text-white text-xl" />,
       metric: "40% efficiency improvement",
       metricIcon: <TrendingUp className="mr-2 w-4 h-4" />,
-      githubUrl: "https://github.com/aditya998800/SE-Inventory",
+      githubUrl: "https://github.com/aditya00604/SE-Inventory",
       gradient: "from-indigo-500/20 to-purple-500/20",
       borderColor: "border-indigo-500/30"
     },
@@ -73,31 +73,9 @@ export default function ProjectsSection() {
       icon: <ExternalLink className="text-white text-xl" />,
       metric: "Enhanced development workflow",
       metricIcon: <TrendingUp className="mr-2 w-4 h-4" />,
-      githubUrl: "https://github.com/aditya998800/API-Tester",
+      githubUrl: "",
       gradient: "from-cyan-500/20 to-blue-500/20",
       borderColor: "border-cyan-500/30"
-    },
-    {
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard. Built with modern technologies for scalability and performance.",
-      technologies: ["React", "Node.js", "MongoDB"],
-      icon: <TrendingUp className="text-white text-xl" />,
-      metric: "Complete e-commerce solution",
-      metricIcon: <TrendingUp className="mr-2 w-4 h-4" />,
-      githubUrl: "https://github.com/aditya998800/Ecommerce-Platform",
-      gradient: "from-emerald-500/20 to-green-500/20",
-      borderColor: "border-emerald-500/30"
-    },
-    {
-      title: "Weather Analytics Dashboard",
-      description: "Data visualization platform for weather analytics with real-time updates, historical data analysis, and predictive modeling. Features interactive charts and comprehensive reporting.",
-      technologies: ["Python", "Flask", "Chart.js"],
-      icon: <Brain className="text-white text-xl" />,
-      metric: "95% prediction accuracy",
-      metricIcon: <Brain className="mr-2 w-4 h-4" />,
-      githubUrl: "https://github.com/aditya998800/Weather-Analytics",
-      gradient: "from-yellow-500/20 to-orange-500/20",
-      borderColor: "border-yellow-500/30"
     }
   ];
 
