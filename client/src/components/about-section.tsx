@@ -81,9 +81,7 @@ export default function AboutSection() {
                       <div className="bg-gradient-to-r from-tech-purple/10 to-neon-green/10 rounded-lg p-2">
                         <strong className="text-tech-purple">NAAC A++</strong> Grade Accredited
                       </div>
-                      <div className="bg-gradient-to-r from-electric-blue/10 to-tech-purple/10 rounded-lg p-2">
-                        <strong className="text-electric-blue">99%</strong> Placement Rate
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
