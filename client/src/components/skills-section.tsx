@@ -17,12 +17,7 @@ export default function SkillsSection() {
     { name: "SQL", proficiency: 85, projects: "Database Design" },
   ];
 
-  const achievements = [
-    "900+ DSA problems solved across platforms",
-    "Ranked 167th out of 12,000+ in Codeforces Round 1016",
-    "11th rank nationally in SAE competition (150+ teams)",
-    "Qualified for Boeing Aeromodelling final round at IIT Bombay"
-  ];
+
 
   return (
     <section id="skills" className="py-20 gradient-bg relative overflow-hidden">
