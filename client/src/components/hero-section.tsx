@@ -142,15 +142,6 @@ export default function HeroSection() {
               className="flex flex-wrap gap-4 mt-6"
             >
               <a 
-                href="https://www.geeksforgeeks.org/user/akm998800hj/" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-lg hover:scale-105 transition-transform font-medium"
-                data-testid="link-gfg"
-              >
-                GeeksforGeeks
-              </a>
-              <a 
                 href="https://codeforces.com/profile/aditya998800" 
                 target="_blank"
                 rel="noopener noreferrer"
