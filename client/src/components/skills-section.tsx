@@ -1,7 +1,8 @@
-import { Code, Globe, Database } from "lucide-react";
+import { Code, Globe, Database, GraduationCap, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Keyboard3D from "./keyboard-3d";
+import CircularTechStack from "./circular-tech-stack";
 
 export default function SkillsSection() {
   const { ref, inView } = useInView({
@@ -53,116 +54,121 @@ export default function SkillsSection() {
             Technical <span className="text-electric-blue">Skills</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-electric-blue to-neon-green mx-auto animate-shimmer"></div>
-          <p className="text-lg text-slate-300 mt-4 max-w-2xl mx-auto">
-            Mastering the art of code with powerful tools and technologies
+          <div className="flex items-center justify-center gap-4 mt-4 mb-2">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-neon-green/20 to-electric-blue/20 px-4 py-2 rounded-full border border-neon-green/30">
+              <GraduationCap className="w-5 h-5 text-neon-green" />
+              <span className="text-white font-semibold">Fresher</span>
+            </div>
+            <div className="flex items-center gap-2 bg-gradient-to-r from-electric-blue/20 to-tech-purple/20 px-4 py-2 rounded-full border border-electric-blue/30">
+              <Calendar className="w-5 h-5 text-electric-blue" />
+              <span className="text-white font-semibold">2025 Batch</span>
+            </div>
+          </div>
+          <p className="text-lg text-slate-300 mt-2 max-w-2xl mx-auto">
+            Ready to contribute with modern tech stack and fresh perspective
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Programming Languages */}
+        {/* Circular Tech Stack Display */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 1.2, delay: 0.3 }}
+          className="mb-16"
+        >
+          <CircularTechStack />
+        </motion.div>
+
+        {/* Skills Summary Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+          {/* Programming Proficiency */}
           <motion.div 
-            initial={{ opacity: 0, x: -50, rotateY: -15 }}
-            animate={inView ? { opacity: 1, x: 0, rotateY: 0 } : {}}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="tech-card rounded-xl p-6 hover:border-electric-blue transition-all duration-300 group hover:scale-105 transform-3d"
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="tech-card rounded-xl p-6 text-center group hover:scale-105 transform-3d"
           >
             <motion.div 
-              whileHover={{ scale: 1.05, rotateY: 5 }}
-              className="flex items-center mb-4"
+              whileHover={{ rotateY: 15 }}
+              className="w-16 h-16 bg-gradient-to-br from-electric-blue to-tech-purple rounded-full flex items-center justify-center mx-auto mb-4 glow-pulse"
             >
-              <motion.div 
-                whileHover={{ rotateZ: 15 }}
-                className="w-12 h-12 bg-gradient-to-br from-electric-blue to-tech-purple rounded-lg flex items-center justify-center mr-4 glow-pulse"
-              >
-                <Code className="text-white text-xl" />
-              </motion.div>
-              <h3 className="text-xl font-bold text-white">Languages</h3>
-              <div className="ml-auto">
-                <Keyboard3D variant="keyboard" size="sm" animationType="typewriter" />
-              </div>
+              <Code className="text-white text-2xl" />
             </motion.div>
-            <div className="space-y-3">
+            <h3 className="text-xl font-bold text-white mb-3">Programming</h3>
+            <div className="space-y-2">
               {languages.map((lang) => (
                 <div key={lang.name} className="flex justify-between items-center">
-                  <span className="text-slate-300">{lang.name}</span>
-                  <div className="w-20 h-2 bg-slate-700 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-to-r from-electric-blue to-neon-green transition-all duration-1000"
-                      style={{ width: `${lang.proficiency}%` }}
+                  <span className="text-slate-300 text-sm">{lang.name}</span>
+                  <div className="w-16 h-1 bg-slate-700 rounded-full overflow-hidden">
+                    <motion.div 
+                      initial={{ width: 0 }}
+                      animate={inView ? { width: `${lang.proficiency}%` } : {}}
+                      transition={{ duration: 1, delay: 1 + (languages.indexOf(lang) * 0.1) }}
+                      className="h-full bg-gradient-to-r from-electric-blue to-neon-green"
                       data-testid={`skill-${lang.name.toLowerCase()}`}
-                    ></div>
+                    />
                   </div>
                 </div>
               ))}
             </div>
           </motion.div>
           
-          {/* Web Development */}
+          {/* Web Technologies */}
           <motion.div 
-            initial={{ opacity: 0, y: 50, rotateX: -15 }}
-            animate={inView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="tech-card rounded-xl p-6 hover:border-neon-green transition-all duration-300 group hover:scale-105 transform-3d"
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1, delay: 1 }}
+            className="tech-card rounded-xl p-6 text-center group hover:scale-105 transform-3d"
           >
             <motion.div 
-              whileHover={{ scale: 1.05, rotateY: -5 }}
-              className="flex items-center mb-4"
+              whileHover={{ rotateY: -15 }}
+              className="w-16 h-16 bg-gradient-to-br from-neon-green to-electric-blue rounded-full flex items-center justify-center mx-auto mb-4 glow-pulse"
             >
-              <motion.div 
-                whileHover={{ rotateZ: -15 }}
-                className="w-12 h-12 bg-gradient-to-br from-neon-green to-electric-blue rounded-lg flex items-center justify-center mr-4 glow-pulse"
-              >
-                <Globe className="text-white text-xl" />
-              </motion.div>
-              <h3 className="text-xl font-bold text-white">Web Development</h3>
-              <div className="ml-auto">
-                <Keyboard3D variant="mouse" size="sm" animationType="rotate" />
-              </div>
+              <Globe className="text-white text-2xl" />
             </motion.div>
-            <div className="flex flex-wrap gap-2">
-              {webTechnologies.map((tech) => (
-                <span 
+            <h3 className="text-xl font-bold text-white mb-3">Web Stack</h3>
+            <div className="flex flex-wrap gap-1 justify-center">
+              {webTechnologies.map((tech, index) => (
+                <motion.span 
                   key={tech}
-                  className="px-3 py-1 bg-electric-blue/20 text-electric-blue rounded-full text-sm"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 1.2 + (index * 0.1) }}
+                  className="px-2 py-1 bg-neon-green/20 text-neon-green rounded-full text-xs"
                   data-testid={`tech-${tech.toLowerCase().replace('.', '-')}`}
                 >
                   {tech}
-                </span>
+                </motion.span>
               ))}
             </div>
           </motion.div>
           
-          {/* Databases */}
+          {/* Database & Tools */}
           <motion.div 
-            initial={{ opacity: 0, x: 50, rotateY: 15 }}
-            animate={inView ? { opacity: 1, x: 0, rotateY: 0 } : {}}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="tech-card rounded-xl p-6 hover:border-tech-purple transition-all duration-300 group hover:scale-105 transform-3d"
+            initial={{ opacity: 0, x: 50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 1, delay: 1.2 }}
+            className="tech-card rounded-xl p-6 text-center group hover:scale-105 transform-3d"
           >
             <motion.div 
-              whileHover={{ scale: 1.05, rotateY: 5 }}
-              className="flex items-center mb-4"
+              whileHover={{ rotateY: 15 }}
+              className="w-16 h-16 bg-gradient-to-br from-tech-purple to-neon-green rounded-full flex items-center justify-center mx-auto mb-4 glow-pulse"
             >
-              <motion.div 
-                whileHover={{ rotateZ: 15 }}
-                className="w-12 h-12 bg-gradient-to-br from-tech-purple to-neon-green rounded-lg flex items-center justify-center mr-4 glow-pulse"
-              >
-                <Database className="text-white text-xl" />
-              </motion.div>
-              <h3 className="text-xl font-bold text-white">Databases</h3>
-              <div className="ml-auto">
-                <Keyboard3D variant="cpu" size="sm" animationType="bounce" />
-              </div>
+              <Database className="text-white text-2xl" />
             </motion.div>
-            <div className="flex flex-wrap gap-2">
-              {databases.map((db) => (
-                <span 
+            <h3 className="text-xl font-bold text-white mb-3">Data & Tools</h3>
+            <div className="flex flex-wrap gap-1 justify-center">
+              {databases.map((db, index) => (
+                <motion.span 
                   key={db}
-                  className="px-3 py-1 bg-tech-purple/20 text-tech-purple rounded-full text-sm"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 1.4 + (index * 0.1) }}
+                  className="px-2 py-1 bg-tech-purple/20 text-tech-purple rounded-full text-xs"
                   data-testid={`db-${db.toLowerCase()}`}
                 >
                   {db}
-                </span>
+                </motion.span>
               ))}
             </div>
           </motion.div>
