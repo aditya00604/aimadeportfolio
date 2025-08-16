@@ -177,7 +177,7 @@ export default function HeroSection() {
               transition={{ delay: 1.6, duration: 0.8 }}
               className="mt-6"
             >
-              <VisitorCount />
+              
             </motion.div>
           </div>
           
